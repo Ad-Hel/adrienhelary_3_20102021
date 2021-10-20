@@ -1,0 +1,21 @@
+// colors
+$blue: #9356DC;
+$magenta: #FF79DA;
+$cyan: #99E2D0;
+$black: #18092A;
+$grey: #eaeaea;
+$light-grey: #F6F6F6; 
+// colors map
+$colors:
+(
+    primary: $blue,
+    secondary: $magenta,   
+    tertiary: $cyan,
+    dark: $black,
+    grey: $grey,
+    light: $light-grey
+);
+
+$brand-font: 'Shrikhand';
+$main-title-font: 'Shrikhand';
+$main-font: 'Roboto';
