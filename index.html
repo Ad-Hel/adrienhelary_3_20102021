@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Ohmyfood</title>
+    </head>
+    <body class="container">
+        <header class="container__header">
+            <nav class="nav-bar">
+                <a href="index.html" class="nav-bar__back-button"><i class="fas fa-arrow-left"></i></a>
+                <a href="#" class="nav-bar__brand brand">ohmyfood</a>
+            </nav>
+        </header>
+        <main class="container__body">
+            <div class="location">
+                <i class="location__icon fas fa-map-marker-alt"></i>
+                <p class="location__text">Paris, Belleville</p>
+            </div>
+            <div class="cta">
+                <h2 class="cta__title">Réserver le menu qui vous convient</h2>
+                <p class="cta__lead">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a role="button" href="#restaurants" class="cta__button">Explorer nos restaurants</a> 
+            </div>
+            <aside class="walkthrough">
+                <h2 class="walkthrough__title">Fonctionnement</h2>
+                <ol class="walktrough__list">
+                    <li class="walktrough__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                    <li class="walktrough__step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                    <li class="walktrough__step"><i class="fas fa-store"></i>Dégustez un restaurant</li>
+                </ol>
+            </aside>
+            <section class="restaurants-list">
+                <h2 class="restaurants-list__title">Restaurants</h2>
+                <article class="card card--new">
+                    <img class="card__img">
+                    <div class="card__content">
+                        <div class="card__text">
+                            <h3 class="card__title">La palette du goût</h3>
+                            <p class="card__location">Ménilmontant</p>
+                        </div>
+                        <form class="favory">
+                            <button type="submit" class="favory__button"><i class="favory__icon far fa-heart"></i></button>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="container__footer">
+            <ul class="footer__content">
+                <li class="footer__entry brand">ohmyfood</li>
+                <li class="footer__entry"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li class="footer__entry"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li class="footer__entry">Mentions légales</li>
+                <li class="footer__entry">Contact</li>
+            </ul>
+        </footer>
+    </body>
+</html>
