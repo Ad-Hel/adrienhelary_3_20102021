@@ -4,7 +4,9 @@ $magenta: #FF79DA;
 $cyan: #99E2D0;
 $black: #18092A;
 $grey: #eaeaea;
-$light-grey: #F6F6F6; 
+$light-grey: #F6F6F6;
+$dark-grey: #7E7E7E;
+$light-black: #353535; 
 // colors map
 $colors:
 (
@@ -13,7 +15,9 @@ $colors:
     tertiary: $cyan,
     dark: $black,
     grey: $grey,
-    light: $light-grey
+    light: $light-grey,
+    not-active: $dark-grey,
+    semi-dark: $light-black
 );
 
 $brand-font: 'Shrikhand';

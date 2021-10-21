@@ -1,0 +1,38 @@
+.walkthrough{
+    margin: 3rem 1.5rem;
+    &__list{
+        font-size: 1rem;
+        padding-left: 0.75rem;
+        list-style: none;
+        counter-reset: step;
+    }
+    &__step{
+        position: relative;
+        background-color: map-get($colors, light );
+        padding: 1.5rem 0;
+        margin: 0.75rem 0;
+        border-radius: 3rem;
+        text-align: center;
+        &::before{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 50%;
+            background-color: map-get($colors, primary);
+            display: inline;
+            color: white;
+            line-height: 1.5rem;
+            counter-increment: step;
+            content: counter(step);
+            
+        }
+        .fas{
+            color: map-get($colors, not-active );
+            position: absolute;
+            left: 2.5rem;
+        }
+    }
+}

@@ -3,6 +3,10 @@
 @import "2-utils/variables";
 @import "1-base/typography";
 
-@import "3-layout/header";
+@import "3-layout/container";
 @import "3-layout/location";
 @import "3-layout/cta";
+@import "3-layout/walkthtrough";
+@import "3-layout/restaurants-list";
+
+@import "4-composant/card";
