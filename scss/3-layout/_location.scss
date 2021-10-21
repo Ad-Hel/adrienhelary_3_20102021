@@ -4,9 +4,9 @@
     // box-shadow: 0 -2px 0 5px map-get($colors, dark );
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
-    font-size: 2rem;
+    padding: 0.75rem;
+    font-size: 1rem;
     &__icon{
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 }
