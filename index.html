@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -11,7 +12,7 @@
         <header class="container__header">
             <nav class="nav-bar">
                 <a href="index.html" class="nav-bar__back-button"><i class="fas fa-arrow-left"></i></a>
-                <a href="#" class="nav-bar__brand brand">ohmyfood</a>
+                <a href="#" class="nav-bar__brand">ohmyfood</a>
             </nav>
         </header>
         <main class="container__body">
@@ -26,16 +27,16 @@
             </div>
             <aside class="walkthrough">
                 <h2 class="walkthrough__title">Fonctionnement</h2>
-                <ol class="walktrough__list">
-                    <li class="walktrough__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                    <li class="walktrough__step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
-                    <li class="walktrough__step"><i class="fas fa-store"></i>Dégustez un restaurant</li>
+                <ol class="walkthrough__list">
+                    <li class="walkthrough__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                    <li class="walkthrough__step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                    <li class="walkthrough__step"><i class="fas fa-store"></i>Dégustez un restaurant</li>
                 </ol>
             </aside>
             <section class="restaurants-list">
                 <h2 class="restaurants-list__title">Restaurants</h2>
                 <article class="card card--new">
-                    <img class="card__img">
+                    <img class="card__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Focus d'une assiette composée avec soin sur une table dressée avec soin.">
                     <div class="card__content">
                         <div class="card__text">
                             <h3 class="card__title">La palette du goût</h3>
@@ -45,16 +46,17 @@
                             <button type="submit" class="favory__button"><i class="favory__icon far fa-heart"></i></button>
                         </form>
                     </div>
+                    <a href="#" title="Composer son menu" class="card__link"></a>
                 </article>
             </section>
         </main>
         <footer class="container__footer">
-            <ul class="footer__content">
-                <li class="footer__entry brand">ohmyfood</li>
-                <li class="footer__entry"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                <li class="footer__entry"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                <li class="footer__entry">Mentions légales</li>
-                <li class="footer__entry">Contact</li>
+            <ul class="site-map">
+                <li class="site-map__entry site-map__entry--brand">ohmyfood</li>
+                <li class="site-map__entry"><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+                <li class="site-map__entry"><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+                <li class="site-map__entry">Mentions légales</li>
+                <li class="site-map__entry">Contact</li>
             </ul>
         </footer>
     </body>
