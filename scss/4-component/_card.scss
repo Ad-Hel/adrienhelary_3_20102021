@@ -1,16 +1,18 @@
 .card{
+    display: flex;
+    flex-direction: column;
     position: relative;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
     &__img{
         object-fit: cover;
         object-position: bottom;
-        height: 12rem;
+        height: 10.5rem;
         width: 100%;
     }    
     &__content{
-        // height: 4rem;
+        background-color: white;
         padding: 0.5rem 1rem 1rem;
         display: flex;
         justify-content: space-between;
@@ -31,7 +33,20 @@
             z-index: 1;
         }
     }
-    .favory{
+    &--new{
+        &::before{
+            content: "Nouveau";
+            background-color: map-get($colors, tertiary );
+            border-radius: 0.25rem; 
+            padding: 0.5rem  0.75rem;
+            font-size: 0.75rem;
+            color: $dark-cyan;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+    .bookmark{
         z-index: 2;
     }
 }
