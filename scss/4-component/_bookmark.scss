@@ -1,0 +1,26 @@
+.bookmark{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 1rem;
+    &__svg-color{
+        &--primary{
+            stop-color: map-get($colors, primary);
+        }
+        &--secondary{
+            stop-color: map-get($colors, secondary )
+        }
+    }
+    &__icon{
+        fill: url(#bookmark__icon-fill);
+        fill-opacity: 0;    
+        stroke: map-get($colors, not-active);
+        stroke-width: 20px;
+        height: 1.5rem;
+        &:active{
+            fill-opacity: 1;
+            stroke: url(#bookmark__icon-fill);
+        }
+    }
+}
