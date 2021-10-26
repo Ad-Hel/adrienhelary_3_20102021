@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 h1 {
@@ -34,23 +35,38 @@ a {
   text-decoration: none;
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes flexbasis {
+  0% {
+    flex-basis: 0.0001%;
+  }
+  100% {
+    flex-basis: 15%;
+  }
+}
 .header {
   padding: 1rem;
 }
 
 .footer {
-  padding: 1.5rem;
-  background-color: #353535;
+  padding: 1rem 1.5rem 3rem;
+  background-color: #333333;
 }
 .footer .site-map {
   padding: 0;
   margin: 0;
   list-style: none;
-  color: white;
-  font-size: 1rem;
+  color: #FFF;
 }
 .footer .site-map__entry {
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 .footer .site-map__entry .fas {
   font-size: 0.75rem;
@@ -58,30 +74,28 @@ a {
 }
 .footer .site-map__entry--brand {
   font-family: "Shrikhand";
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .location {
-  color: #18092A;
-  background-color: #eaeaea;
+  color: #000;
+  background-color: #ebebeb;
   display: flex;
   justify-content: center;
-  padding: 0.75rem;
-  font-size: 1rem;
+  padding: 1rem;
 }
 .location__icon {
   margin-right: 1rem;
 }
 
 .cta {
-  background-color: #F6F6F6;
+  padding: 3rem 1.5rem;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  padding: 3rem;
   text-align: center;
 }
 .cta__lead {
-  font-size: 1rem;
   font-weight: 200;
   margin-bottom: 1.5rem;
 }
@@ -91,38 +105,36 @@ a {
 
 .restaurants-list {
   padding: 3rem 1.5rem;
-  background-color: #F6F6F6;
+  background-color: whitesmoke;
 }
 
 .main-picture {
   height: 20rem;
+  width: 100%;
+  object-fit: cover;
 }
 
 .menu {
   margin-top: -5rem;
-  z-index: 3;
+  z-index: 1;
   position: relative;
-  background-color: #F6F6F6;
-  padding: 1.5rem;
+  background-color: whitesmoke;
+  padding: 1.5rem 1.5rem 3rem;
   border-radius: 3rem 3rem 0 0;
 }
 .menu__header {
-  background-color: #F6F6F6;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem 0;
 }
 .menu__title {
-  background-color: #F6F6F6;
   margin: 0;
   font-size: 1.5rem;
   font-weight: 300;
 }
 .menu__title--h2 {
   text-transform: uppercase;
-  font-size: 1.2rem;
   position: relative;
   margin-bottom: 1rem;
 }
@@ -130,9 +142,9 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  top: 1.7rem;
+  top: 2.1rem;
   width: 3rem;
-  height: 0.2rem;
+  height: 0.3rem;
   background-color: #99E2D0;
 }
 .menu__content {
@@ -141,28 +153,27 @@ a {
 }
 .menu__section {
   border: none;
-  margin: 1rem 0;
   padding: 0;
+  margin: 1.5rem 0 0;
 }
 .menu__button {
-  margin: 3rem auto;
+  margin: auto;
   width: 50%;
 }
 
 .walkthrough {
-  margin: 3rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 .walkthrough__list {
-  font-size: 1rem;
-  padding-left: 0.75rem;
   list-style: none;
   counter-reset: step;
+  padding-left: 0.75rem;
 }
 .walkthrough__step {
   position: relative;
-  background-color: #F6F6F6;
+  background-color: whitesmoke;
   padding: 1.5rem 0;
-  margin: 0.75rem 0;
+  margin: 1rem 0;
   border-radius: 3rem;
   text-align: center;
 }
@@ -176,13 +187,13 @@ a {
   border-radius: 50%;
   background-color: #9356DC;
   display: inline;
-  color: white;
+  color: #FFF;
   line-height: 1.5rem;
   counter-increment: step;
   content: counter(step);
 }
 .walkthrough__step .fas {
-  color: #7E7E7E;
+  color: gray;
   position: absolute;
   left: 2.5rem;
 }
@@ -190,22 +201,21 @@ a {
 .nav-bar {
   display: grid;
   grid-template-columns: 3rem auto 3rem;
-  color: #18092A;
+  color: #000;
   width: 100%;
 }
 .nav-bar__brand {
   font-family: "Shrikhand";
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   grid-column-start: 2;
   grid-column-end: 3;
 }
 .nav-bar__back-button {
   display: none;
-  font-size: 1.75rem;
   align-self: center;
   grid-column-start: 1;
-  color: #353535;
+  color: #333333;
 }
 .nav-bar--comeback .nav-bar__back-button {
   display: block;
@@ -226,14 +236,14 @@ a {
   width: 100%;
 }
 .card__content {
-  background-color: white;
-  padding: 0.5rem 1rem 1rem;
+  background-color: #FFF;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: top;
 }
 .card__title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .card__link {
   display: hidden;
@@ -251,9 +261,9 @@ a {
   content: "Nouveau";
   background-color: #99E2D0;
   border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
   font-size: 0.75rem;
-  color: #008766;
+  color: #008564;
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -263,11 +273,12 @@ a {
 }
 
 .bookmark {
+  align-self: flex-start;
   border: none;
   background-color: transparent;
   cursor: pointer;
   padding: 0;
-  margin-right: 1rem;
+  margin: 0.5rem;
 }
 .bookmark__svg-color--primary {
   stop-color: #9356DC;
@@ -278,7 +289,7 @@ a {
 .bookmark__icon {
   fill: url(#bookmark__icon-fill);
   fill-opacity: 0;
-  stroke: #7E7E7E;
+  stroke: gray;
   stroke-width: 20px;
   height: 1.5rem;
 }
@@ -288,22 +299,21 @@ a {
 }
 
 .button {
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   border: none;
   border-radius: 2rem;
   background: linear-gradient(#FF79DA, #9356DC);
-  font-size: 1rem;
-  color: white;
+  color: #FFF;
   cursor: pointer;
 }
 
 .radio {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   margin: 1rem 0;
   height: 5rem;
-  background-color: white;
+  background-color: #FFF;
   border-radius: 1rem;
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
@@ -315,13 +325,33 @@ a {
 .radio__input:checked + .radio__checked-marker {
   display: flex;
 }
-.radio__input:checked + .radio__content {
-  background-color: cadetblue;
-}
 .radio__text {
-  flex: 4 1 60%;
-  padding: 1rem;
+  flex: 0 4 70%;
+  padding: 1rem 0;
   overflow: hidden;
+  margin-left: 2.5%;
+}
+.radio__price {
+  flex: 0 1 10%;
+  padding: 1rem 0;
+  margin-right: 2.5%;
+  font-weight: 600;
+  text-align: right;
+  align-self: flex-end;
+}
+.radio__checked-marker {
+  flex: 0 1 15%;
+  display: none;
+  order: 1;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  background-color: #99E2D0;
+}
+.radio__checked-marker .fas {
+  font-size: 1.75rem;
+  height: 1.75rem;
 }
 .radio__title {
   margin-bottom: 0.5rem;
@@ -333,26 +363,6 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.radio__price {
-  flex: 1 1 20%;
-  padding: 1rem;
-  font-weight: 600;
-  text-align: right;
-}
-.radio__checked-marker {
-  display: none;
-  order: 1;
-  height: 5rem;
-  flex: 1 1 20%;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: #99E2D0;
-}
-.radio__checked-marker .fas {
-  font-size: 1.75rem;
-  height: 1.75rem;
 }
 .radio__label::after {
   position: absolute;

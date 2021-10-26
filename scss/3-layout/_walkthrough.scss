@@ -1,16 +1,15 @@
 .walkthrough{
-    margin: 3rem 1.5rem;
+    @include front-page-section-padding;
     &__list{
-        font-size: 1rem;
-        padding-left: 0.75rem;
         list-style: none;
         counter-reset: step;
+        padding-left: 0.75rem;
     }
     &__step{
         position: relative;
-        background-color: map-get($colors, light );
-        padding: 1.5rem 0;
-        margin: 0.75rem 0;
+        background-color: $light-4;
+        padding: $space-lg 0;
+        margin: $space-md 0;
         border-radius: 3rem;
         text-align: center;
         &::before{
@@ -21,16 +20,16 @@
             height: 1.5rem;
             width: 1.5rem;
             border-radius: 50%;
-            background-color: map-get($colors, primary);
+            background-color: $primary;
             display: inline;
-            color: white;
+            color: $light;
             line-height: 1.5rem;
             counter-increment: step;
             content: counter(step);
             
         }
         .fas{
-            color: map-get($colors, not-active );
+            color: $dark-50;
             position: absolute;
             left: 2.5rem;
         }

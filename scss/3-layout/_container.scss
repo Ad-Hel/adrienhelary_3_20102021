@@ -1,26 +1,25 @@
 // Common layout
 .header{
-    padding: 1rem;
+    padding: $space-md;
     
 }
 .footer{
-    padding: 1.5rem;
-    background-color: map-get($colors, semi-dark );
+    padding: $space-md $space-lg $space-xl;
+    background-color: $dark-20;
     .site-map{
         padding: 0;
         margin: 0;
         list-style: none;
-        color: white;
-        font-size: 1rem;
+        color: $white;
         &__entry{
-            margin: 0.75rem 0;
+            margin: $space-sm 0;
             .fas{
                 font-size: 0.75rem;
-                margin-right: 0.5rem;
+                margin-right: $space-sm;
             }
             &--brand{
                 font-family: $brand-font;
-                margin-bottom: 1.5rem;
+                margin-bottom: $space-md;
             }
         }
     }
@@ -29,75 +28,71 @@
 // landing page specific layouts
 
 .location{
-    color: map-get($colors, dark );
-    background-color: map-get($colors,grey);
+    color: $dark;
+    background-color: $light-8;
     // box-shadow: 0 -2px 0 5px map-get($colors, dark );
     display: flex;
     justify-content: center;
-    padding: 0.75rem;
-    font-size: 1rem;
+    padding: $space-md;
     &__icon{
-        margin-right: 1rem;
+        margin-right: $space-md;
     }
 }
 .cta{
-    background-color: map-get($colors, light);
+    @include front-page-section-padding;
+    background-color: $light-4;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
     text-align: center;
     &__lead{
-        font-size: 1rem;
         font-weight: 200;
-        margin-bottom: 1.5rem;
+        margin-bottom: $space-lg;
     }
     &__button{
         margin: auto;
     }
 }
 .restaurants-list{
-    padding: 3rem 1.5rem;
-    background-color: map-get($colors, light );
+    @include front-page-section-padding;
+    background-color: $light-4;
 }
 
 // Menu specific layouts
 .main-picture{
     height: 20rem;
+    width: 100%;
+    object-fit: cover;
 }
 .menu{
     margin-top: -5rem;
-    z-index: 3;
+    z-index: 1;
     position: relative;
-    background-color: map-get($colors, light );
-    padding: 1.5rem;
+    background-color: $light-4;
+    padding: $space-lg $space-lg $space-xl;
     border-radius: 3rem 3rem 0 0 ;
     &__header{
-        background-color: map-get($colors, light );
         text-align: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0.5rem 0;
 
     }
     &__title{
-        background-color: map-get($colors , light );
         margin: 0;
         font-size: 1.5rem;
         font-weight: 300;
         &--h2{
             text-transform: uppercase;
-            font-size: 1.2rem;
             position: relative;
-            margin-bottom: 1rem;
+            margin-bottom: $space-md;
             &::after{
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 1.7rem;
+                top: 2.1rem;
                 width: 3rem;
-                height: 0.2rem;
-                background-color: map-get($colors, tertiary );
+                height: 0.3rem;
+                background-color: $tertiary;
             }
         }
     }
@@ -107,11 +102,11 @@
     }
     &__section{
         border: none;
-        margin: 1rem 0;
         padding: 0;
+        margin: $space-lg 0 0;
     }
     &__button{
-        margin: 3rem auto;
+        margin: auto;
         width: 50%;
     }
 }

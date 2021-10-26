@@ -1,21 +1,20 @@
 .nav-bar{
     display: grid;
-    grid-template-columns: 3rem auto 3rem;
-    color: $black;
+    grid-template-columns: $space-xl auto $space-xl;
+    color: $dark;
     width: 100%;
     &__brand{
         font-family: $brand-font;
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
         grid-column-start: 2;
         grid-column-end: 3;
     }
     &__back-button{
         display: none;
-        font-size: 1.75rem;
         align-self: center;
         grid-column-start: 1;
-        color: map-get($colors, semi-dark)
+        color: $dark-20;
     }
     &--comeback{
         .nav-bar__back-button{

@@ -1,10 +1,10 @@
 .radio{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 1rem 0;
+    justify-content: space-between;
+    margin: $space-md 0;
     height: 5rem;
-    background-color: white;
+    background-color: $light;
     border-radius: 1rem;
     box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
     overflow: hidden;
@@ -14,14 +14,34 @@
         &:checked+.radio__checked-marker{
             display: flex;
         }
-        &:checked+.radio__content{
-            background-color: cadetblue;
-        }
     }
     &__text{
-        flex: 4 1 60%;
-        padding: 1rem;
+        flex: 0 4 70%;
+        padding: $space-md 0;
         overflow: hidden;
+        margin-left: 2.5%;
+    }
+    &__price{
+        flex: 0 1 10%;
+        padding: $space-md 0;
+        margin-right: 2.5%;
+        font-weight: 600;
+        text-align: right;
+        align-self: flex-end;
+    }
+    &__checked-marker{
+        flex: 0 1 15%;
+        display: none;
+        order: 1;
+        height: 5rem; 
+        justify-content: center;
+        align-items: center;
+        color: $light;
+        background-color: $tertiary;
+        .fas{
+            font-size: 1.75rem;
+            height: 1.75rem;
+        }   
     }
     &__title{
         margin-bottom: 0.5rem;
@@ -33,27 +53,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }
-    &__price{
-        flex: 1 1 20%;
-        padding: 1rem;
-        font-weight: 600;
-        text-align: right;
-    }
-    &__checked-marker{
-        display: none;
-        order: 1;
-        height: 5rem;
-        flex: 1 1 20%;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        background-color: map-get($colors, tertiary );
-        .fas{
-            font-size: 1.75rem;
-            height:1.75rem;
-        }
-        
     }
     &__label::after{
         position: absolute;

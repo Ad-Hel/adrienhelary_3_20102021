@@ -12,14 +12,14 @@
         width: 100%;
     }    
     &__content{
-        background-color: white;
-        padding: 0.5rem 1rem 1rem;
+        background-color: $light;
+        padding: $space-md;
         display: flex;
         justify-content: space-between;
         align-items: top;
     }
     &__title{
-        margin-bottom: 0.25rem;
+        margin-bottom: $space-sm;
     }
     &__link{
         display: hidden;
@@ -36,14 +36,14 @@
     &--new{
         &::before{
             content: "Nouveau";
-            background-color: map-get($colors, tertiary );
+            background-color: $tertiary;
             border-radius: 0.25rem; 
-            padding: 0.5rem  0.75rem;
+            padding: $space-sm $space-md;
             font-size: 0.75rem;
-            color: $dark-cyan;
+            color: $tertiary-dark;
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: $space-md;
+            right: $space-md;
         }
     }
     .bookmark{

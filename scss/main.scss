@@ -5,6 +5,11 @@
 @import "2-utils/variables";
 @import "1-base/typography";
 
+// Utils
+
+@import "2-utils/mixin";
+@import "2-utils/animations";
+
 // Layouts
 
 @import "3-layout/container";

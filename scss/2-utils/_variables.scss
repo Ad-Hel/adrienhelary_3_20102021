@@ -1,26 +1,44 @@
+@use "sass:color";
+
 // colors
 $blue: #9356DC;
 $magenta: #FF79DA;
 $cyan: #99E2D0;
-$dark-cyan: #008766;
-$black: #18092A;
-$grey: #eaeaea;
-$light-grey: #F6F6F6;
-$dark-grey: #7E7E7E;
-$light-black: #353535; 
-// colors map
-$colors:
-(
-    primary: $blue,
-    secondary: $magenta,   
-    tertiary: $cyan,
-    dark: $black,
-    grey: $grey,
-    light: $light-grey,
-    not-active: $dark-grey,
-    semi-dark: $light-black
-);
+$black: #000;
+$white: #FFF;
 
+// named colors
+
+// basic colors
+$primary: $blue;
+$secondary: $magenta;  
+$tertiary: $cyan;
+$dark: $black;
+$light: $white;
+
+// primary color variation
+$primary-light: color.scale($primary, $saturation: 100%, $lightness: 60%);
+
+// tertiary color variation
+$tertiary-dark: color.scale($tertiary, $saturation: 100%, $lightness: -65%);
+
+// dark color variations
+$dark-20: color.scale($dark, $lightness: 20%);
+$dark-50: color.scale($dark, $lightness: 50%);
+
+// light color variations
+$light-4: color.scale($light, $lightness: -4%);
+$light-8: color.scale($light, $lightness: -8%);
+
+// Fonts
 $brand-font: 'Shrikhand';
 $main-title-font: 'Shrikhand';
 $main-font: 'Roboto';
+
+// Spaces
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 3rem;
+
+// Border-radius

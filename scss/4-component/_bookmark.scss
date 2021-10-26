@@ -1,21 +1,22 @@
 .bookmark{
+    align-self: flex-start;
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-    margin-right: 1rem;
+    margin: $space-sm;
     &__svg-color{
         &--primary{
-            stop-color: map-get($colors, primary);
+            stop-color: $primary;
         }
         &--secondary{
-            stop-color: map-get($colors, secondary )
+            stop-color: $secondary;
         }
     }
     &__icon{
         fill: url(#bookmark__icon-fill);
         fill-opacity: 0;    
-        stroke: map-get($colors, not-active);
+        stroke: $dark-50;
         stroke-width: 20px;
         height: 1.5rem;
         &:active{
