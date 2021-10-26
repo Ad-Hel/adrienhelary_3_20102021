@@ -1,0 +1,69 @@
+.radio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    height: 5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    &__input{
+        display: none;
+        &:checked+.radio__checked-marker{
+            display: flex;
+        }
+        &:checked+.radio__content{
+            background-color: cadetblue;
+        }
+    }
+    &__text{
+        flex: 4 1 60%;
+        padding: 1rem;
+        overflow: hidden;
+    }
+    &__title{
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__subtitle{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    &__price{
+        flex: 1 1 20%;
+        padding: 1rem;
+        font-weight: 600;
+        text-align: right;
+    }
+    &__checked-marker{
+        display: none;
+        order: 1;
+        height: 5rem;
+        flex: 1 1 20%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: map-get($colors, tertiary );
+        .fas{
+            font-size: 1.75rem;
+            height:1.75rem;
+        }
+        
+    }
+    &__label::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: "";
+        background-color: transparent; 
+        cursor: pointer;
+    }
+}
