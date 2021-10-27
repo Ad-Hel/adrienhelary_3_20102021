@@ -1,16 +1,26 @@
+@keyframes translation{
+    0%{
+        transform: translateX(150%);
+    }
+    100%{
+        transform: translateX(0%) ;
+    }
+}
 @keyframes rotation{
-    0% {
+    0%{
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
     }
-};
-@keyframes flexbasis{
-    0% {
-        flex-basis: 0.0001%;
+}
+@keyframes emerge{
+    0%{ 
+        transform: translateY(1rem);
+        opacity: 0;
     }
     100%{
-        flex-basis: 15%;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
