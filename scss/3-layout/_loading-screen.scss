@@ -15,6 +15,7 @@
         padding: $space-lg;
         background: linear-gradient($primary, $secondary);
         -webkit-background-clip: text;
+        background-clip: text;
         color: rgba(0, 0, 0, 0);
         opacity: 0;
         font-size: 3.5rem;
