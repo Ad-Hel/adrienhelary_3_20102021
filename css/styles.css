@@ -285,27 +285,6 @@ a {
   animation: step-icon-variation 500ms 1s;
 }
 
-.container::before {
-  content: "";
-  background-color: #363636;
-  color: #FFF;
-  font-family: "Shrikhand";
-  text-transform: lowercase;
-  font-size: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 10;
-  animation: loading 1s both;
-}
-
 .nav-bar {
   display: grid;
   grid-template-columns: 3rem auto 3rem;
