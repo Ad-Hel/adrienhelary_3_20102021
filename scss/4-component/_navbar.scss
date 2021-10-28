@@ -1,5 +1,6 @@
 .nav-bar{
     display: grid;
+    margin: $space-md 0;
     grid-template-columns: $space-xl auto $space-xl;
     color: $dark;
     width: 100%;
@@ -19,6 +20,16 @@
     &--comeback{
         .nav-bar__back-button{
             display: block;
+            margin-left: $space-md;
+        }
+    }
+    @include tablet-view{
+        display: block;
+        width: 50%;
+        margin: 0;
+        &--comeback{
+            display: grid;
+            width: 100%;
         }
     }
 }  

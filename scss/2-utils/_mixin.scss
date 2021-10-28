@@ -1,3 +1,8 @@
 @mixin front-page-section-padding{
     padding: $space-xl $space-lg;
 }
+@mixin tablet-view {
+    @media (min-width: 768px) and (max-width: 1199px){
+        @content
+    } 
+}

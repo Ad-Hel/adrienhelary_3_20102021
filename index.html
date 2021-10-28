@@ -9,33 +9,35 @@
         <title>Ohmyfood</title>
     </head>
     <body class="container">
-        <div class="loading-screen">
+        <!-- <div class="loading-screen">
             <h1 class="loading-screen__title">ohmyfood</h1>
-        </div>
+        </div>-->
         <header class="header">
             <nav class="nav-bar">
                 <a href="index.html" class="nav-bar__back-button"><i class="fas fa-arrow-left"></i></a>
                 <a href="#" class="nav-bar__brand">ohmyfood</a>
             </nav>
-        </header>
-        <main class="body">
             <div class="location">
                 <i class="location__icon fas fa-map-marker-alt"></i>
                 <input class="location__input" name="location" placeholder="Paris, Belleville">
             </div>
-            <div class="cta">
-                <h2 class="cta__title">Réserver le menu qui vous convient</h2>
-                <p class="cta__lead">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a role="button" href="#restaurants-list" class="button cta__button">Explorer nos restaurants</a> 
-            </div>
-            <aside class="walkthrough">
-                <h2 class="walkthrough__title">Fonctionnement</h2>
-                <ol class="walkthrough__list">
-                    <li class="walkthrough__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                    <li class="walkthrough__step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
-                    <li class="walkthrough__step"><i class="fas fa-store"></i>Dégustez un restaurant</li>
-                </ol>
-            </aside>
+        </header>
+        <main class="body">
+            <section class="hero">
+                <div class="cta">
+                    <h2 class="cta__title">Réserver le menu qui vous convient</h2>
+                    <p class="cta__lead">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <a role="button" href="#restaurants-list" class="button cta__button">Explorer nos restaurants</a> 
+                </div>
+                <aside class="walkthrough">
+                    <h2 class="walkthrough__title">Fonctionnement</h2>
+                    <ol class="walkthrough__list">
+                        <li class="walkthrough__step"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                        <li class="walkthrough__step"><i class="fas fa-list-ul"></i>Composez votre menu</li>
+                        <li class="walkthrough__step"><i class="fas fa-store"></i>Dégustez un restaurant</li>
+                    </ol>
+                </aside>
+            </section>
             <section id="restaurants-list" class="restaurants-list">
                 <h2 class="restaurants-list__title">Restaurants</h2>
                 <article class="card card--new">

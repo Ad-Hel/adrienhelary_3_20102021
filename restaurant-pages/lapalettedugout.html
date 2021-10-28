@@ -9,14 +9,18 @@
         <title>La palette du goût</title>
     </head>
     <body class="container">
-        <div class="loading-screen">
+        <!--<div class="loading-screen">
             <h1 class="loading-screen__title">ohmyfood</h1>
-        </div>
-        <header class="header">
+        </div>-->
+        <header class="header header--menu">
             <nav class="nav-bar nav-bar--comeback">
                 <a href="../index.html" class="nav-bar__back-button"><i class="fas fa-arrow-left"></i></a>
                 <a href="#" class="nav-bar__brand">ohmyfood</a>
             </nav>
+            <div class="location">
+                <i class="location__icon fas fa-map-marker-alt"></i>
+                <input class="location__input" name="location" placeholder="Paris, Belleville">
+            </div>
         </header>
         <img class="main-picture" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Focus d'une assiette composée avec soin sur une table dressée avec soin.">
         <main class="menu"> 
@@ -34,6 +38,88 @@
                 </button>
             </header>
             <form class="menu__content">
+                <fieldset class="menu__section">
+                    <legend>
+                        <h2 class="menu__title menu__title--h2">Entrées</h2>
+                    </legend>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="snail" name="starters" value="snail">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Fricassée d'escargot</h3>
+                            <p class="radio__subtitle">Au piment d'espelette</p>
+                        </div>
+                        <p class="radio__price">25€</p> 
+                        <label class="radio__label" for="snail"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="foiegras" name="starters" value="foiegras">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Foie gras de canard mi-cuit</h3>
+                            <p class="radio__subtitle">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <p class="radio__price">35€</p> 
+                        <label class="radio__label" for="foiegras"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="eggs" name="starters" value="eggs">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Oeuf au plat</h3>
+                            <p class="radio__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <p class="radio__price">20€</p> 
+                        <label class="radio__label" for="eggs"></label>
+                    </div>
+                </fieldset>
+                <fieldset class="menu__section">
+                    <legend>
+                        <h2 class="menu__title menu__title--h2">Entrées</h2>
+                    </legend>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="snail" name="starters" value="snail">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Fricassée d'escargot</h3>
+                            <p class="radio__subtitle">Au piment d'espelette</p>
+                        </div>
+                        <p class="radio__price">25€</p> 
+                        <label class="radio__label" for="snail"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="foiegras" name="starters" value="foiegras">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Foie gras de canard mi-cuit</h3>
+                            <p class="radio__subtitle">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <p class="radio__price">35€</p> 
+                        <label class="radio__label" for="foiegras"></label>
+                    </div>
+                    <div class="radio">
+                        <input class="radio__input" type="radio" id="eggs" name="starters" value="eggs">
+                        <div class="radio__checked-marker">
+                            <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                        </div> 
+                        <div class="radio__text">
+                            <h3 class="radio__title">Oeuf au plat</h3>
+                            <p class="radio__subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <p class="radio__price">20€</p> 
+                        <label class="radio__label" for="eggs"></label>
+                    </div>
+                </fieldset>
                 <fieldset class="menu__section">
                     <legend>
                         <h2 class="menu__title menu__title--h2">Entrées</h2>
