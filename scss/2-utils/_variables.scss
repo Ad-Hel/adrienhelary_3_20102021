@@ -17,18 +17,18 @@ $dark: $black;
 $light: $white;
 
 // primary color variation
-$primary-light: color.scale($primary, $saturation: 100%, $lightness: 60%);
+$primary-light: color.adjust($primary, $saturation: 34%, $lightness: 36%);
 
 // tertiary color variation
-$tertiary-dark: color.scale($tertiary, $saturation: 100%, $lightness: -65%);
+$tertiary-dark: color.adjust($tertiary, $saturation: 44%, $lightness: -48%);
 
 // dark color variations
-$dark-20: color.scale($dark, $lightness: 20%);
-$dark-50: color.scale($dark, $lightness: 50%);
+$dark-20: color.adjust($dark, $lightness: 21%);
+$dark-50: color.scale($dark, $lightness: 49%);
 
 // light color variations
-$light-4: color.scale($light, $lightness: -4%);
-$light-8: color.scale($light, $lightness: -8%);
+$light-4: color.adjust($light, $lightness: -4%);
+$light-8: color.adjust($light, $lightness: -8%);
 
 // Fonts
 $brand-font: 'Shrikhand';
@@ -42,3 +42,11 @@ $space-lg: 1.5rem;
 $space-xl: 3rem;
 
 // Border-radius
+$radius-xs: 0.25rem;
+$radius-sm: 1rem;
+$radius-md: 2rem;
+$radius-xl: 3rem;
+$radius-circle: 50%;
+
+//  Shadow
+$shadow: 0 0.5rem 1rem -0.75rem rgba(0, 0, 0, 0.25);

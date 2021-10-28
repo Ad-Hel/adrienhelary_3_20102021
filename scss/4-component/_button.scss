@@ -1,8 +1,36 @@
+@use "sass:color";
 .button{
     padding: $space-md;
     border: none;
-    border-radius: 2rem;
+    border-radius: $radius-md;
     background: linear-gradient($secondary, $primary);
     color: $light;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(color.scale($secondary, $lightness: 30%), color.scale($primary, $lightness: 30%));
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    &:hover{
+        &::after{
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+    }
+    &:active{
+        &::after{
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+    }
 }

@@ -5,7 +5,7 @@
     height: 5rem;
     background-color: $light;
     border-radius: 1rem;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+    box-shadow: $shadow;
     overflow: hidden;
     position: relative;
     animation: emerge 2s both ease-in-out;

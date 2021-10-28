@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 1rem;
+    border-radius: $radius-sm;
     overflow: hidden;
-    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+    box-shadow: $shadow;
     &__img{
         object-fit: cover;
         object-position: bottom;
@@ -37,7 +37,7 @@
         &::before{
             content: "Nouveau";
             background-color: $tertiary;
-            border-radius: 0.25rem; 
+            border-radius: $radius-xs; 
             padding: $space-sm $space-md;
             font-size: 0.75rem;
             color: $tertiary-dark;

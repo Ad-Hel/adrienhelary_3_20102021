@@ -1,5 +1,6 @@
 .walkthrough{
     @include front-page-section-padding;
+    cursor: progress;
     &__list{
         list-style: none;
         counter-reset: step;
@@ -10,8 +11,10 @@
         background-color: $light-4;
         padding: $space-lg 0;
         margin: $space-md 0;
-        border-radius: 3rem;
+        border-radius: $radius-xl;
         text-align: center;
+        z-index: 1;
+        box-shadow: $shadow;
         &::before{
             position: absolute;
             left: 0;
@@ -19,7 +22,7 @@
             transform: translate(-50%, -50%);
             height: 1.5rem;
             width: 1.5rem;
-            border-radius: 50%;
+            border-radius: $radius-circle;
             background-color: $primary;
             display: inline;
             color: $light;
@@ -33,5 +36,45 @@
             position: absolute;
             left: 2.5rem;
         }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $primary-light;
+            opacity: 0;
+            z-index: -1;
+            border-radius: $radius-xl;
+        }
+    }
+    &:hover .walkthrough__step{
+        &:nth-child(1){
+            &::after{
+                animation: step-background-variation 500ms;
+            }
+            .fas{
+                animation: step-icon-variation 500ms;
+            }   
+        }
+        &:nth-child(2){
+            &::after{
+                animation: step-background-variation 500ms 500ms;
+            }
+            .fas{
+                animation: step-icon-variation 500ms 500ms;
+            }   
+        }
+        &:nth-child(3){
+            &::after{
+                animation: step-background-variation 500ms 1s;
+            }
+            .fas{
+                animation: step-icon-variation 500ms 1s;
+            }   
+        }
+
+
     }
 }
