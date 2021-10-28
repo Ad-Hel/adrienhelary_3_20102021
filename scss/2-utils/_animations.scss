@@ -51,3 +51,11 @@
         color: $primary;
     }
 }
+@keyframes loading-logo{
+    from{
+        opacity: 0.75;
+    }
+    to{
+        opacity: 1;
+    }
+}
