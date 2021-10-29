@@ -98,10 +98,10 @@ a {
 }
 @keyframes grow {
   from {
-    transform: scale(0);
+    transform: scaleX(0);
   }
   to {
-    transform: scale(1);
+    transform: scaleX(1);
   }
 }
 @media (min-width: 1200px) {

@@ -12,11 +12,11 @@
         display: none;
         &:checked+.radio__checked-marker{
             flex-grow: 5;
-            transition: flex-grow 2s ease-in-out;
+            transition: flex-grow 1s ease-in-out;
             .radio__checked-icon-container{
-                animation: translation 2s ease-in-out both;
+                animation: translation 1s ease-in-out both;
                 .fas{
-                    animation: rotation 2s ease-in-out;
+                    animation: rotation 1s ease-in-out;
                 }
             }
         }
@@ -52,6 +52,7 @@
         transform-origin: right;
         order: 1;
         height: 5rem; 
+        font-size: 1.5rem;
         justify-content: center;
         align-items: center;
         color: $light;
