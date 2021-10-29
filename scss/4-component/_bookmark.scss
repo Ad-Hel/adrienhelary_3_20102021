@@ -5,6 +5,9 @@
     cursor: pointer;
     padding: 0;
     margin: $space-sm;
+    @include desktop-view{
+        margin: 0;
+    }
     &__svg-color{
         &--primary{
             stop-color: $primary;

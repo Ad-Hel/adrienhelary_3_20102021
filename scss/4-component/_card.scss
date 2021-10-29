@@ -3,6 +3,7 @@
     flex-direction: column;
     position: relative;
     border-radius: $radius-sm;
+    background-color: $light;
     overflow: hidden;
     box-shadow: $shadow;
     &__img{
@@ -16,13 +17,14 @@
         padding: $space-md;
         display: flex;
         justify-content: space-between;
-        align-items: top;
+        @include desktop-view{
+            padding: $space-md $space-sm;
+        }
     }
     &__title{
         margin-bottom: $space-sm;
     }
     &__link{
-        display: hidden;
         &:after{
             content: "";
             position: absolute;

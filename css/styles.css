@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -513,7 +516,7 @@ a {
   bottom: 0;
   left: 0;
   z-index: 10;
-  animation: loading 3s both;
+  animation: loading 1s both;
 }
 .loading-screen__title {
   font-family: "Shrikhand";
@@ -525,7 +528,7 @@ a {
   opacity: 0;
   font-size: 3.5rem;
   z-index: 11;
-  animation: loading 3s both, loading-logo 1s ease-in-out both infinite alternate;
+  animation: loading 1s both, loading-logo 500ms ease-in-out both infinite alternate;
 }
 
 .nav-bar {
@@ -569,6 +572,7 @@ a {
   flex-direction: column;
   position: relative;
   border-radius: 1rem;
+  background-color: #FFF;
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem -0.75rem rgba(0, 0, 0, 0.25);
 }
@@ -583,13 +587,14 @@ a {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: top;
+}
+@media (min-width: 1200px) {
+  .card__content {
+    padding: 1rem 0.5rem;
+  }
 }
 .card__title {
   margin-bottom: 0.5rem;
-}
-.card__link {
-  display: hidden;
 }
 .card__link:after {
   content: "";
@@ -627,6 +632,11 @@ a {
   cursor: pointer;
   padding: 0;
   margin: 0.5rem;
+}
+@media (min-width: 1200px) {
+  .bookmark {
+    margin: 0;
+  }
 }
 .bookmark__svg-color--primary {
   stop-color: #9356DC;
@@ -770,14 +780,14 @@ a {
     content: "";
     height: 5rem;
     width: 10%;
-    border-radius: 0 3rem 3rem 0;
+    border-radius: 0 1rem 1rem 0;
     background-color: #99E2D0;
     position: absolute;
     left: 75%;
     top: 29%;
     transform-origin: right;
     transform: scaleX(0);
-    animation: grow 1s ease-in-out forwards;
+    animation: grow 1s 2s ease-in-out forwards;
   }
   .cta::after {
     content: url("../images/svg/check-circle-solid.svg");
@@ -786,9 +796,8 @@ a {
     position: absolute;
     left: calc(75% + 0.75rem);
     top: calc( 29% + 0.75rem);
-    color: #FFF;
     opacity: 0;
-    animation: step-background-variation 200ms 750ms forwards, translation 1s 750ms ease-in-out backwards, rotation 1s 2s linear;
+    animation: step-background-variation 200ms 2750ms forwards, translation 1s 2750ms ease-in-out backwards, rotation 1s 4s linear;
   }
 }
 
