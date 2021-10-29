@@ -23,7 +23,7 @@
             margin-left: $space-md;
         }
     }
-    @include tablet-view{
+    @include not-mobile-view{
         display: block;
         width: 50%;
         margin: 0;

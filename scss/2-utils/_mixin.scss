@@ -1,8 +1,28 @@
+// main containers spacing
+
 @mixin front-page-section-padding{
     padding: $space-xl $space-lg;
 }
+
+@mixin desktop-boxed-container($margin-top: $space-lg){
+    max-width: 800px;
+    margin: $margin-top auto 0;
+}
+
+// Media queries
+
 @mixin tablet-view {
     @media (min-width: 768px) and (max-width: 1199px){
-        @content
+        @content;
     } 
+}
+@mixin desktop-view{
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+@mixin not-mobile-view{
+    @media (min-width: 758px){
+        @content;
+    }
 }

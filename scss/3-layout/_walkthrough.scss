@@ -1,10 +1,27 @@
 .walkthrough{
     @include front-page-section-padding;
-    cursor: progress;
+    @include desktop-view{
+        background-color: $light;
+    }
+    &__title{
+        @include tablet-view{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $dark-50;
+            text-align: center;
+        }
+        @include desktop-view{
+            @include desktop-boxed-container;
+        }
+    }
     &__list{
         list-style: none;
         counter-reset: step;
         padding-left: 0.75rem;
+        @include desktop-view{
+            display: flex;
+            gap: $space-xl;
+        }
     }
     &__step{
         position: relative;
@@ -48,6 +65,9 @@
             z-index: -1;
             border-radius: $radius-xl;
         }
+        @include desktop-view{
+            flex: 1 1 25%;
+        }
     }
     &:hover .walkthrough__step{
         &:nth-child(1){
@@ -74,17 +94,9 @@
                 animation: step-icon-variation 500ms 1s;
             }   
         }
-
-
     }
     @include tablet-view{
         flex: 1;
         padding: 0;
-        &__title{
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: $dark-50;
-            text-align: center;
-        }
     }
 }
