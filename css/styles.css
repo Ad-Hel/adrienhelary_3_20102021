@@ -96,6 +96,14 @@ a {
     opacity: 1;
   }
 }
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 @media (min-width: 1200px) {
   .body {
     background-color: whitesmoke;
@@ -244,6 +252,7 @@ a {
     margin: 1.5rem auto 0;
     height: 50vh;
     justify-content: center;
+    position: relative;
   }
 }
 @media (min-width: 1200px) {
@@ -685,13 +694,13 @@ a {
 }
 .radio__input:checked + .radio__checked-marker {
   flex-grow: 5;
-  transition: flex-grow 2s ease-in-out;
+  transition: flex-grow 1s ease-in-out;
 }
 .radio__input:checked + .radio__checked-marker .radio__checked-icon-container {
-  animation: translation 2s ease-in-out both;
+  animation: translation 1s ease-in-out both;
 }
 .radio__input:checked + .radio__checked-marker .radio__checked-icon-container .fas {
-  animation: rotation 2s ease-in-out;
+  animation: rotation 1s ease-in-out;
 }
 .radio:nth-child(3) {
   animation-delay: 250ms;
@@ -723,6 +732,7 @@ a {
   transform-origin: right;
   order: 1;
   height: 5rem;
+  font-size: 1.5rem;
   justify-content: center;
   align-items: center;
   color: #FFF;
@@ -753,6 +763,33 @@ a {
   content: "";
   background-color: transparent;
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .cta::before {
+    content: "";
+    height: 5rem;
+    width: 10%;
+    border-radius: 0 3rem 3rem 0;
+    background-color: #99E2D0;
+    position: absolute;
+    left: 75%;
+    top: 29%;
+    transform-origin: right;
+    transform: scaleX(0);
+    animation: grow 1s ease-in-out forwards;
+  }
+  .cta::after {
+    content: url("../images/svg/check-circle-solid.svg");
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    left: calc(75% + 0.75rem);
+    top: calc( 29% + 0.75rem);
+    color: #FFF;
+    opacity: 0;
+    animation: step-background-variation 200ms 750ms forwards, translation 1s 750ms ease-in-out backwards, rotation 1s 2s linear;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

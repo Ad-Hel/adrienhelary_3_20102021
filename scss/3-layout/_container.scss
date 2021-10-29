@@ -136,6 +136,7 @@
         @include desktop-boxed-container;
         height: 50vh;
         justify-content: center;
+        position: relative;
     }
     &__title{
         @include desktop-view{

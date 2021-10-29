@@ -1,0 +1,28 @@
+.cta{
+    @include desktop-view{
+        &::before{
+            content: "";
+            height:5rem;
+            width: 10%;
+            border-radius: 0 $radius-xl $radius-xl 0;
+            background-color:$tertiary;
+            position:absolute;
+            left:75%;
+            top:29%;
+            transform-origin: right;
+            transform: scaleX(0);
+            animation: grow 1s ease-in-out forwards;
+        }
+        &::after{
+            content: url("../images/svg/check-circle-solid.svg");
+            height: 3.5rem;
+            width: 3.5rem;
+            position:absolute;
+            left: calc(75% + 0.75rem);
+            top: calc( 29% + 0.75rem);
+            color: $light;
+            opacity: 0;
+            animation: step-background-variation 200ms 750ms forwards, translation 1s 750ms ease-in-out backwards, rotation 1s 2s linear;
+        }
+    }
+}
