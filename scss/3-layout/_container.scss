@@ -193,8 +193,9 @@
         width: 100%;
         object-fit: cover;
         @include desktop-view{
-            flex: 1;
+            flex: 1 2 30%; //not work on chrome
             height: auto;
+            max-width: 33%; //fix issue with chrome
         }
     }
 }
@@ -207,7 +208,7 @@
     padding: $space-lg $space-lg $space-xl;
     border-radius: $radius-xl $radius-xl 0 0 ;
     @include desktop-view{
-        flex: 2;
+        flex: 2 1 60%;
         margin-top: 0;
         border-radius: 0;
     }
