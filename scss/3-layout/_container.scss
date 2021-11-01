@@ -188,6 +188,7 @@
 .restaurant{
     @include desktop-view{
         display: flex;
+        margin-top: $space-lg;
     }
     &__picture{
         height: 20rem;
@@ -196,7 +197,7 @@
         @include desktop-view{
             flex: 1 2 30%; //not work on chrome
             height: auto;
-            max-width: 33%; //fix issue with chrome
+            max-width: 33%; //fix issue on chrome
         }
     }
 }

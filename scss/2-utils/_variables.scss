@@ -24,7 +24,7 @@ $tertiary-dark: color.adjust($tertiary, $saturation: 44%, $lightness: -48%);
 
 // dark color variations
 $dark-20: color.adjust($dark, $lightness: 21%);
-$dark-50: color.scale($dark, $lightness: 49%);
+$dark-50: color.adjust($dark, $lightness: 49%);
 
 // light color variations
 $light-4: color.adjust($light, $lightness: -4%);

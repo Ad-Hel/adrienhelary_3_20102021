@@ -318,6 +318,7 @@ a {
 @media (min-width: 1200px) {
   .restaurant {
     display: flex;
+    margin-top: 1.5rem;
   }
 }
 .restaurant__picture {
@@ -538,6 +539,13 @@ a {
   color: #000;
   width: 100%;
 }
+@media (min-width: 758px) {
+  .nav-bar {
+    display: block;
+    width: 50%;
+    margin: 0;
+  }
+}
 .nav-bar__brand {
   font-family: "Shrikhand";
   font-size: 2rem;
@@ -556,11 +564,6 @@ a {
   margin-left: 1rem;
 }
 @media (min-width: 758px) {
-  .nav-bar {
-    display: block;
-    width: 50%;
-    margin: 0;
-  }
   .nav-bar--comeback {
     display: grid;
     width: 100%;

@@ -4,6 +4,11 @@
     grid-template-columns: $space-xl auto $space-xl;
     color: $dark;
     width: 100%;
+    @include not-mobile-view{
+        display: block;
+        width: 50%;
+        margin: 0;
+    }
     &__brand{
         font-family: $brand-font;
         font-size: 2rem;
@@ -22,12 +27,7 @@
             display: block;
             margin-left: $space-md;
         }
-    }
-    @include not-mobile-view{
-        display: block;
-        width: 50%;
-        margin: 0;
-        &--comeback{
+        @include not-mobile-view{
             display: grid;
             width: 100%;
         }
