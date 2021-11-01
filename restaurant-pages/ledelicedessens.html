@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Le délice des sens</title>
+    </head>
+    <body class="container">
+        <div class="loading-screen">
+            <h1 class="loading-screen__title">ohmyfood</h1>
+        </div>
+        <header class="header header--menu">
+            <nav class="nav-bar nav-bar--comeback">
+                <a href="../index.html" class="nav-bar__back-button"><i class="fas fa-arrow-left"></i></a>
+                <a href="#" class="nav-bar__brand">ohmyfood</a>
+            </nav>
+            <div class="location">
+                <i class="location__icon fas fa-map-marker-alt"></i>
+                <input class="location__input" name="location" placeholder="Paris, Belleville">
+            </div>
+        </header>
+        <main class="restaurant">
+            <img class="restaurant__picture" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Focus d'une assiette composée avec soin sur une table dressée avec soin.">
+            <div class="menu"> 
+                <header class="menu__header">
+                    <h1 class="menu__title">Le délice des sens</h1>
+                    <button type="button" class="bookmark">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="bookmark__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="-10 -10 532 532">
+                            <defs>
+                                <linearGradient id="bookmark__icon-fill" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" class="bookmark__svg-color--primary"/>
+                                    <stop offset="100%" class="bookmark__svg-color--secondary"/>
+                                </linearGradient>
+                                </defs>
+                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                    </button>
+                </header>
+                <form class="menu__content">
+                    <fieldset class="menu__section">
+                        <legend>
+                            <h2 class="menu__title menu__title--h2">Entrées</h2>
+                        </legend>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="tuna" name="starters" value="tuna">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Tartare de thon</h3>
+                                <p class="radio__subtitle">Assaisonné au yuzu</p>
+                            </div>
+                            <p class="radio__price">25€</p> 
+                            <label class="radio__label" for="tuna"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="lobster" name="starters" value="lobster">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Bouchée de homard croustillant</h3>
+                                <p class="radio__subtitle">Et sa farandole de petits légumes</p>
+                            </div>
+                            <p class="radio__price">35€</p> 
+                            <label class="radio__label" for="lobster"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="mushrooms-soup" name="starters" value="mushrooms-soup">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Velouté de cèpes </h3>
+                                <p class="radio__subtitle">Aux truffes</p>
+                            </div>
+                            <p class="radio__price">20€</p> 
+                            <label class="radio__label" for="mushrooms-soup"></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="menu__section">
+                        <legend>
+                            <h2 class="menu__title menu__title--h2">Plats</h2>
+                        </legend>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="chicken" name="main-course" value="chicken">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Poulet rôti aux herbes de Provence</h3>
+                                <p class="radio__subtitle">Et sa crème de truffe</p>
+                            </div>
+                            <p class="radio__price">40€</p> 
+                            <label class="radio__label" for="chicken"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="langouste" name="main-course" value="langouste">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Langouste rôtie </h3>
+                                <p class="radio__subtitle">Et ses légumes de saison</p>
+                            </div>
+                            <p class="radio__price">35€</p> 
+                            <label class="radio__label" for="langouste"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="beef" name="main-course" value="beef">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Côte de bœuf Angus</h3>
+                                <p class="radio__subtitle">Et sa purée de panais</p>
+                            </div>
+                            <p class="radio__price">44€</p> 
+                            <label class="radio__label" for="beef"></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="menu__section">
+                        <legend>
+                            <h2 class="menu__title menu__title--h2">Desserts</h2>
+                        </legend>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="desserts-train" name="desserts" value="desserts-train">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Farandole de desserts</h3>
+                                <p class="radio__subtitle">Du chef</p>
+                            </div>
+                            <p class="radio__price">18€</p> 
+                            <label class="radio__label" for="desserts-train"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="creme-brulee" name="desserts" value="creme-brulee">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Crème brulée</h3>
+                                <p class="radio__subtitle">Revisitée</p>
+                            </div>
+                            <p class="radio__price">22€</p> 
+                            <label class="radio__label" for="creme-brulee"></label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__input" type="radio" id="tiramisu" name="desserts" value="tiramisu">
+                            <div class="radio__checked-marker">
+                                <span class="radio__checked-icon-container"><i class="fas fa-check-circle"></i></span>
+                            </div> 
+                            <div class="radio__text">
+                                <h3 class="radio__title">Tiramisu</h3>
+                                <p class="radio__subtitle">À la noisette</p>
+                            </div>
+                            <p class="radio__price">23€</p> 
+                            <label class="radio__label" for="tiramisu"></label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="button menu__button">Commander</button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="site-map">
+                <li class="site-map__entry site-map__entry--brand">ohmyfood</li>
+                <li class="site-map__entry"><a href="" class="site-map__link" title="Proposer un restaurant"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+                <li class="site-map__entry"><a href="" class="site-map__link" title="Devenir partenaire"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+                <li class="site-map__entry"><a href="" class="site-map__link" title="Mentions légales">Mentions légales</a></li>
+                <li class="site-map__entry"><a href="mailto:contact@ohmyfood.com" class="site-map__link" title="Contact">Contact</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
