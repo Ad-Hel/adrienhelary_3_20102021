@@ -9,6 +9,7 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    box-shadow :  $shadow;
     &::after{
         content: "";
         position: absolute;
@@ -22,6 +23,8 @@
         transition: opacity 1s ease-in-out;
     }
     &:hover{
+        box-shadow: $shadow-lg;
+        transition: box-shadow 1s ease-in-out;
         &::after{
             transition: opacity 1s ease-in-out;
             opacity: 1;
