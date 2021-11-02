@@ -239,12 +239,9 @@
             }
         }
     }
-    &__content{
-        display: flex;
-        flex-direction: column;
-    }
     &__section{
         border: none;
+        min-width: 0;
         padding: 0;
         margin: $space-lg 0 0;
         display: flex;
@@ -260,6 +257,7 @@
         }
     }
     &__button{
+        display: block;
         margin: $space-lg auto;
         width: 50%;
     }
