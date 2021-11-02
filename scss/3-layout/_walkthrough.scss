@@ -29,7 +29,8 @@
         padding: $space-lg 0;
         margin: $space-md 0;
         border-radius: $radius-xl;
-        text-align: center;
+        display: flex;
+        justify-content: center;
         z-index: 1;
         box-shadow: $shadow;
         &::before{
@@ -43,6 +44,7 @@
             background-color: $primary;
             display: inline;
             color: $light;
+            text-align: center;
             line-height: 1.5rem;
             counter-increment: step;
             content: counter(step);
@@ -51,7 +53,7 @@
         .fas{
             color: $dark-50;
             position: absolute;
-            left: 2.5rem;
+            margin-right: 75%;
         }
         &::after{
             content: "";
