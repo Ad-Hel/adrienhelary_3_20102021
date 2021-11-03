@@ -13,6 +13,7 @@
     &__title{ 
         font-family: $brand-font;
         padding: $space-lg;
+        position: relative;
         background: linear-gradient($primary, $secondary);
         -webkit-background-clip: text;
         background-clip: text;
@@ -20,6 +21,27 @@
         opacity: 0;
         font-size: 3.5rem;
         z-index: 11;
-        animation: loading 1s both, loading-logo 500ms ease-in-out both infinite alternate;
+        animation: loading 1s both, loading-logo 1s ease-in-out both infinite alternate;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -5rem;
+            left: calc(50% - 2.5rem);
+            background: linear-gradient($primary, $secondary);
+            height: 5rem;
+            width: 5rem;
+            border-radius: $radius-circle;
+            animation: rotation 200ms linear infinite;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: -4.5rem;
+            left: calc(50% - 2rem);
+            background-color: $light;
+            height: 4rem;
+            width: 4rem;
+            border-radius: $radius-circle;
+        }
     }
 }

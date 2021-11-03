@@ -522,6 +522,7 @@ a {
 .loading-screen__title {
   font-family: "Shrikhand";
   padding: 1.5rem;
+  position: relative;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
@@ -529,7 +530,28 @@ a {
   opacity: 0;
   font-size: 3.5rem;
   z-index: 11;
-  animation: loading 1s both, loading-logo 500ms ease-in-out both infinite alternate;
+  animation: loading 1s both, loading-logo 1s ease-in-out both infinite alternate;
+}
+.loading-screen__title::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: calc(50% - 2.5rem);
+  background: linear-gradient(#9356DC, #FF79DA);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  animation: rotation 200ms linear infinite;
+}
+.loading-screen__title::after {
+  content: "";
+  position: absolute;
+  top: -4.5rem;
+  left: calc(50% - 2rem);
+  background-color: #FFF;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
 }
 
 .nav-bar {
