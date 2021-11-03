@@ -23,7 +23,11 @@
         stroke-width: 20px;
         height: 1.5rem;
         &:active{
-            animation: fill 2s  forwards;
+            animation: fill 2s forwards;
+            stroke: url(#bookmark__icon-fill);
+        }
+        &:hover{
+            animation: fill 2s forwards;
             stroke: url(#bookmark__icon-fill);
         }
     }

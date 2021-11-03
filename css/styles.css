@@ -680,6 +680,10 @@ a {
   animation: fill 2s forwards;
   stroke: url(#bookmark__icon-fill);
 }
+.bookmark__icon:hover {
+  animation: fill 2s forwards;
+  stroke: url(#bookmark__icon-fill);
+}
 
 .button {
   padding: 1rem;
