@@ -730,7 +730,24 @@ a {
   animation: emerge 2s both ease-in-out;
 }
 .radio__input {
-  display: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  background-color: transparent;
+  cursor: pointer;
+}
+.radio__input:hover + .radio__checked-marker {
+  flex-grow: 5;
+  transition: flex-grow 1s ease-in-out;
+}
+.radio__input:hover + .radio__checked-marker .radio__checked-icon-container {
+  animation: translation 1s ease-in-out both;
+}
+.radio__input:hover + .radio__checked-marker .radio__checked-icon-container .fas {
+  animation: rotation 1s ease-in-out;
 }
 .radio__input:checked + .radio__checked-marker {
   flex-grow: 5;
@@ -791,16 +808,13 @@ a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.radio__label::after {
+.radio__label {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: "";
-  background-color: transparent;
-  cursor: pointer;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (min-width: 1200px) {
