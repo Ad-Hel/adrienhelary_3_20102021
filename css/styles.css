@@ -402,6 +402,12 @@ a {
 .walkthrough {
   padding: 3rem 1.5rem;
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .walkthrough {
+    flex: 1;
+    padding: 0;
+  }
+}
 @media (min-width: 1200px) {
   .walkthrough {
     background-color: #FFF;
@@ -498,12 +504,6 @@ a {
 }
 .walkthrough:hover .walkthrough__step:nth-child(3) .fas {
   animation: step-icon-variation 500ms 1s;
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .walkthrough {
-    flex: 1;
-    padding: 0;
-  }
 }
 
 .loading-screen {

@@ -1,5 +1,9 @@
 .walkthrough{
     @include front-page-section-padding;
+    @include tablet-view{
+        flex: 1;
+        padding: 0;
+    }
     @include desktop-view{
         background-color: $light;
     }
@@ -96,9 +100,5 @@
                 animation: step-icon-variation 500ms 1s;
             }   
         }
-    }
-    @include tablet-view{
-        flex: 1;
-        padding: 0;
     }
 }
