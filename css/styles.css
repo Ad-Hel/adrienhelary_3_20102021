@@ -444,12 +444,17 @@ a {
   padding: 1.5rem 0;
   margin: 1rem 0;
   border-radius: 3rem;
-  display: flex;
-  justify-content: center;
+  padding-left: 0.75rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 1fr) minmax(min-content, max-content) minmax(0, 1fr);
+  place-items: center;
+  white-space: nowrap;
   z-index: 1;
   box-shadow: 0 0.5rem 1rem -0.75rem rgba(0, 0, 0, 0.25);
 }
 .walkthrough__step::before {
+  counter-increment: step;
+  content: counter(step);
   position: absolute;
   left: 0;
   top: 50%;
@@ -458,17 +463,13 @@ a {
   width: 1.5rem;
   border-radius: 50%;
   background-color: #9356DC;
-  display: inline;
   color: #FFF;
   text-align: center;
   line-height: 1.5rem;
-  counter-increment: step;
-  content: counter(step);
 }
 .walkthrough__step .fas {
   color: #7d7d7d;
-  position: absolute;
-  margin-right: 75%;
+  grid-column: 1;
 }
 .walkthrough__step::after {
   content: "";
@@ -486,6 +487,9 @@ a {
   .walkthrough__step {
     flex: 1 1 25%;
   }
+}
+.walkthrough__text {
+  grid-column: 2;
 }
 .walkthrough:hover .walkthrough__step:nth-child(1)::after {
   animation: step-background-variation 500ms;

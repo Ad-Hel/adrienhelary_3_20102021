@@ -33,11 +33,16 @@
         padding: $space-lg 0;
         margin: $space-md 0;
         border-radius: $radius-xl;
-        display: flex;
-        justify-content: center;
+        padding-left: 0.75rem;
+        display: grid;
+        grid-template-columns: minmax(min-content, 1fr) minmax(min-content, max-content) minmax(0, 1fr);
+        place-items: center;
+        white-space: nowrap;
         z-index: 1;
         box-shadow: $shadow;
         &::before{
+            counter-increment: step;
+            content: counter(step);
             position: absolute;
             left: 0;
             top: 50%;
@@ -46,18 +51,14 @@
             width: 1.5rem;
             border-radius: $radius-circle;
             background-color: $primary;
-            display: inline;
             color: $light;
             text-align: center;
-            line-height: 1.5rem;
-            counter-increment: step;
-            content: counter(step);
-            
+            line-height: 1.5rem;        
         }
         .fas{
             color: $dark-50;
-            position: absolute;
-            margin-right: 75%;
+            grid-column: 1;
+            // margin-left: 1rem;
         }
         &::after{
             content: "";
@@ -74,6 +75,9 @@
         @include desktop-view{
             flex: 1 1 25%;
         }
+    }
+    &__text{
+        grid-column: 2;
     }
     &:hover .walkthrough__step{
         &:nth-child(1){
