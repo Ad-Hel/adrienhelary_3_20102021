@@ -22,7 +22,7 @@
     }
 }
 @mixin not-mobile-view{
-    @media (min-width: 758px){
+    @media (min-width: 768px){
         @content;
     }
 }
