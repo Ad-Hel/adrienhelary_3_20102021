@@ -148,6 +148,7 @@ a {
   .footer .site-map {
     max-width: 800px;
     margin: 0 auto 0;
+    padding: 3rem 1.5rem;
   }
 }
 .footer .site-map__entry {

@@ -33,6 +33,7 @@
         }
         @include desktop-view{
             @include desktop-boxed-container(0);
+            @include front-page-section-padding;
         }
         &__entry{
             margin: $space-sm 0;
