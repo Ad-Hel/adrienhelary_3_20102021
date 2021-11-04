@@ -71,14 +71,12 @@ a {
 }
 @keyframes loading {
   0%, 99% {
-    opacity: 1;
-    content: "ohmyfood";
     z-index: 10;
+    opacity: 1;
   }
   100% {
-    opacity: 0;
-    content: none;
     z-index: -1;
+    opacity: 0;
   }
 }
 @keyframes step-background-variation {
@@ -521,7 +519,7 @@ a {
   bottom: 0;
   left: 0;
   z-index: 10;
-  animation: loading 1s both;
+  animation: loading 5s both;
 }
 .loading-screen__title {
   font-family: "Shrikhand";
@@ -534,7 +532,7 @@ a {
   opacity: 0;
   font-size: 3.5rem;
   z-index: 11;
-  animation: loading 1s both, loading-logo 1s ease-in-out both infinite alternate;
+  animation: loading 5s both, loading-logo 1s ease-in-out both infinite alternate;
 }
 .loading-screen__title::before {
   content: "";
@@ -743,8 +741,6 @@ a {
   height: 100%;
   position: absolute;
   z-index: 1;
-  content: "";
-  background-color: transparent;
   cursor: pointer;
 }
 .radio__input:hover + .radio__checked-marker {
@@ -767,11 +763,17 @@ a {
 .radio__input:checked + .radio__checked-marker .radio__checked-icon-container .fas {
   animation: rotation 1s ease-in-out;
 }
+.radio:nth-child(2) {
+  animation-delay: 5.25s;
+}
 .radio:nth-child(3) {
-  animation-delay: 250ms;
+  animation-delay: 5.5s;
 }
 .radio:nth-child(4) {
-  animation-delay: 500ms;
+  animation-delay: 5.75s;
+}
+.radio:nth-child(5) {
+  animation-delay: 6s;
 }
 .radio__text {
   flex: 1 2 65%;
@@ -800,7 +802,6 @@ a {
   align-items: center;
   color: #FFF;
   background-color: #99E2D0;
-  transition: flex 500ms ease-in-out;
 }
 .radio__checked-icon-container {
   display: inline-block;
@@ -837,7 +838,7 @@ a {
     top: 29%;
     transform-origin: right;
     transform: scaleX(0);
-    animation: grow 1s 2s ease-in-out forwards;
+    animation: grow 1s 5.25s ease-in-out forwards;
   }
   .cta::after {
     content: url("../images/svg/check-circle-solid.svg");
@@ -847,7 +848,7 @@ a {
     left: calc(75% + 0.75rem);
     top: calc( 29% + 0.75rem);
     opacity: 0;
-    animation: step-background-variation 200ms 2750ms forwards, translation 1s 2750ms ease-in-out backwards, rotation 1s 4s linear;
+    animation: step-background-variation 200ms 6s forwards, translation 1s 6s ease-in-out backwards, rotation 1s 7s linear;
   }
 }
 

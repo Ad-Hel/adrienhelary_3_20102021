@@ -11,7 +11,7 @@
             top:29%;
             transform-origin: right;
             transform: scaleX(0);
-            animation: grow 1s 2s ease-in-out forwards;
+            animation: grow 1s onload(250ms) ease-in-out forwards;
         }
         &::after{
             content: url("../images/svg/check-circle-solid.svg");
@@ -21,7 +21,7 @@
             left: calc(75% + 0.75rem);
             top: calc( 29% + 0.75rem);
             opacity: 0;
-            animation: step-background-variation 200ms 2750ms forwards, translation 1s 2750ms ease-in-out backwards, rotation 1s 4s linear;
+            animation: step-background-variation 200ms onload(1s) forwards, translation 1s onload(1s) ease-in-out backwards, rotation 1s onload(2s) linear;
         }
     }
 }

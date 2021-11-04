@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    animation: loading 1s both;
+    animation: loading $loading both;
     &__title{ 
         font-family: $brand-font;
         padding: $space-lg;
@@ -21,7 +21,7 @@
         opacity: 0;
         font-size: 3.5rem;
         z-index: 11;
-        animation: loading 1s both, loading-logo 1s ease-in-out both infinite alternate;
+        animation: loading $loading both, loading-logo 1s ease-in-out both infinite alternate;
         &::before{
             content: "";
             position: absolute;
