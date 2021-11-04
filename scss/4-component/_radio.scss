@@ -14,8 +14,7 @@
         height: 100%;
         position: absolute;
         z-index: 1;
-        content: "";
-        background-color: transparent;
+        // background-color: transparent;
         cursor: pointer; 
         &:hover+.radio__checked-marker{
             flex-grow: 5;
@@ -38,11 +37,13 @@
             }
         }
     }
-    &:nth-child(3){
-        animation-delay: 250ms;
-    }
-    &:nth-child(4){
-        animation-delay: 500ms;
+    // Delay the radio's animation. This is limited to four children of the .section. NB : the first child is the section title. 
+    $delay: 250ms;
+    @for $i from 2 through 5{
+        &:nth-child(#{$i}){
+            animation-delay: onload($delay);
+        }
+        $delay: $delay + 250ms;
     }
     &__text{
         flex: 1 2 65%;
@@ -72,7 +73,6 @@
         align-items: center;
         color: $light;
         background-color: $tertiary;
-        transition: flex 500ms ease-in-out;
     }
     &__checked-icon-container{
         display: inline-block;
