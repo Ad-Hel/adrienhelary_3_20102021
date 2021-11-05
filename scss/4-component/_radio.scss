@@ -72,6 +72,7 @@
         align-items: center;
         color: $light;
         background-color: $tertiary;
+        transition: flex 500ms ease-in-out;
     }
     &__checked-icon-container{
         display: inline-block;

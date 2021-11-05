@@ -803,6 +803,7 @@ a {
   align-items: center;
   color: #FFF;
   background-color: #99E2D0;
+  transition: flex 500ms ease-in-out;
 }
 .radio__checked-icon-container {
   display: inline-block;
