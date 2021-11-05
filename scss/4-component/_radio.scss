@@ -14,7 +14,6 @@
         height: 100%;
         position: absolute;
         z-index: 1;
-        // background-color: transparent;
         cursor: pointer; 
         &:hover+.radio__checked-marker{
             flex-grow: 5;
